@@ -1,6 +1,11 @@
 /**
- * INF-221 Tarea 1: Algoritmos y Complejidad
- * Programa principal de medicion de tiempo y memoria para algoritmos de ordenamiento.
+ * ============================================================================
+ * Tarea 1: Algoritmos de Ordenamiento y Multiplicación de Matrices
+ * Ramo:     INF-221 Algoritmos y Complejidad
+ * Semestre: 2026-2
+ * Autor:    Agustin Ignacio Santibañez Perez
+ * Rol:      [202204682-1]
+ * ============================================================================
  */
 
 #include <iostream>
@@ -29,7 +34,7 @@ void std_sort_wrapper(std::vector<int>& arr) {
 long get_peak_memory_kb() {
     struct rusage usage;
     if (getrusage(RUSAGE_SELF, &usage) == 0) {
-        return usage.ru_maxrss; // En Linux retorna kilobytes
+        return usage.ru_maxrss;
     }
     return 0;
 }
@@ -72,7 +77,7 @@ int main() {
     //Se crea directorio de mediciones segun estructura requerida por el enunciado: measurements/sorting/
     fs::path out_dir = "../../measurements/sorting";
     if (!fs::exists(out_dir)) {
-        out_dir = "measurements/sorting"; // Fallback segun punto de ejecucion
+        out_dir = "measurements/sorting"; 
     }
     fs::create_directories(out_dir);
     std::string out_csv = (out_dir / "sorting_measurements.csv").string();
