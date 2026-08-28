@@ -1,3 +1,10 @@
+# ==============================================================================
+# Tarea 1: Algoritmos de Ordenamiento y Multiplicación de Matrices
+# Ramo:     INF-221 Algoritmos y Complejidad
+# Semestre: 2026-2
+# Autor:    Agustin Ignacio Santibañez Perez
+# Rol:      202204682-1
+# ==============================================================================
 import numpy as np
 import os
 import random
