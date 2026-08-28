@@ -1,6 +1,11 @@
 /**
- * INF-221 Tarea 1: Algoritmos y Complejidad
- * Programa principal de medicion de tiempo y memoria para Matrix Multiplication.
+ * ============================================================================
+ * Tarea 1: Algoritmos de Ordenamiento y Multiplicación de Matrices
+ * Ramo:     INF-221 Algoritmos y Complejidad
+ * Semestre: 2026-2
+ * Autor:    Agustin Ignacio Santibañez Perez
+ * Rol:      [202204682-1]
+ * ============================================================================
  */
 
 #include <iostream>
