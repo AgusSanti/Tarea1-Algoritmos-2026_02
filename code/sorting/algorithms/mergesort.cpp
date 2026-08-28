@@ -5,6 +5,7 @@
  * Semestre: 2026-2
  * Autor:    Agustin Ignacio Santibañez Perez
  * Rol:      [202204682-1]
+ * Referencia: Introducción a los Algoritmos (CLRS) / GeeksforGeeks
  * ============================================================================
  */
 
