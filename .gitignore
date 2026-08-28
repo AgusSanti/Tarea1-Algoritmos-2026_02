@@ -1,0 +1,23 @@
+# Binarios
+*.o
+*.out
+sorting_runner
+matrix_runner
+
+# Archivos auxiliares de LaTeX
+report/*.aux
+report/*.log
+report/*.bbl
+report/*.bcf
+report/*.blg
+report/*.run.xml
+report/*.toc
+report/*.out
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz
+
+# Python y entorno
+__pycache__/
+*.pyc
+.vscode/

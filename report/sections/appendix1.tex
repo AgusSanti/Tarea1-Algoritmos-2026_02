@@ -1,0 +1,62 @@
+\section{Material Complementario y Tablas de Mediciones}
+\label{sec:apendice1}
+
+En este anexo se presentan los gráficos complementarios del experimento y el registro tabular detallado de las mediciones de tiempo de ejecución y consumo de memoria máxima residente (Peak RSS), obtenidas a partir de los benchmarks automatizados.
+
+\subsection{Gráficos Complementarios de Ordenamiento}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{code/sorting/data/plots/plot_aleatorio_D7.png}
+        \caption{Sorting: Caso Aleatorio - Dominio D7.}
+        \label{fig:app_sort_aleatorio_d7}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{code/sorting/data/plots/plot_ascendente_D1.png}
+        \caption{Sorting: Caso Ascendente - Dominio D1.}
+        \label{fig:app_sort_ascendente_d1}
+    \end{minipage}
+\end{figure}
+
+\subsection{Gráficos Complementarios de Multiplicación de Matrices}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{code/matrix_multiplication/data/plots/plot_matrix_diagonal_D10.png}
+        \caption{Matrices: Caso Diagonal - Dominio D10.}
+        \label{fig:app_mat_diagonal_d10}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{code/matrix_multiplication/data/plots/plot_matrix_dispersa_D0.png}
+        \caption{Matrices: Caso Disperso - Dominio D0.}
+        \label{fig:app_mat_dispersa_d0}
+    \end{minipage}
+\end{figure}
+
+\subsection{Resumen de Consumo de Recursos}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|r|r|}
+\hline
+\textbf{Algoritmo} & \textbf{Tamaño ($n$)} & \textbf{Tiempo Promedio (s)} & \textbf{Peak RSS (KB)} \\ \hline
+\textit{std::sort}       & $10^7$ & $\approx 0.65$ & $\approx 41\,200$ \\ \hline
+\textit{Quick Sort}      & $10^7$ & $\approx 0.82$ & $\approx 41\,200$ \\ \hline
+\textit{Merge Sort}      & $10^7$ & $\approx 0.95$ & $\approx 80\,500$ \\ \hline
+\textit{Patience Sort}   & $10^7$ (Aleatorio D7) & $\approx 1.20$ & $\approx 160\,000$ \\ \hline
+\textit{Patience Sort}   & $10^7$ (Descendente D7) & $\approx 0.05$ & $\approx 41\,300$ \\ \hline
+\textit{Naive}           & $1024 \times 1024$ & $\approx 0.18$ & $\approx 16\,800$ \\ \hline
+\textit{Strassen}        & $1024 \times 1024$ & $\approx 0.16$ & $\approx 38\,400$ \\ \hline
+\end{tabular}
+\caption{Consumo representativo de tiempo de CPU y memoria residente máxima.}
+\label{tab:app_recursos}
+\end{table}

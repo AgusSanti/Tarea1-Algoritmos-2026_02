@@ -1,0 +1,30 @@
+/**
+ * INF-221 Tarea 1: Algoritmos y Complejidad
+ * Algoritmo: Multiplicacion tradicional de matrices (Naive) O(n^3)
+ * - Cormen et al. (2022). Introduction to Algorithms (4th ed.), Cap. 4.
+ * - Hennessy & Patterson (2017). Computer Architecture (optimizacion de bucles i-k-j).
+ */
+
+#include <vector>
+
+void naive_multiply(const std::vector<std::vector<int>>& A, 
+                    const std::vector<std::vector<int>>& B, 
+                    std::vector<std::vector<int>>& C, 
+                    int n) {
+    //Inicializar matriz resultado en ceros
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            C[i][j] = 0;
+        }
+    }
+
+    //Orden i-k-j para recorrer filas contiguas de B en memoria
+    for (int i = 0; i < n; ++i) {
+        for (int k = 0; k < n; ++k) {
+            int r = A[i][k];
+            for (int j = 0; j < n; ++j) {
+                C[i][j] += r * B[k][j];
+            }
+        }
+    }
+}
