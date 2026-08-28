@@ -17,14 +17,12 @@ void naive_multiply(const std::vector<std::vector<int>>& A,
                     const std::vector<std::vector<int>>& B, 
                     std::vector<std::vector<int>>& C, 
                     int n) {
-    //Inicializar matriz resultado en ceros
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             C[i][j] = 0;
         }
     }
 
-    //Orden i-k-j para recorrer filas contiguas de B en memoria
     for (int i = 0; i < n; ++i) {
         for (int k = 0; k < n; ++k) {
             int r = A[i][k];
