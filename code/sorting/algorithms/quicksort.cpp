@@ -1,9 +1,14 @@
 /**
- * INF-221 Tarea 1: Algoritmos y Complejidad
- * Algoritmo: Quick Sort (Optimizado con Pivote Central / Mediana)
+ * ============================================================================
+ * Tarea 1: Algoritmos de Ordenamiento y Multiplicación de Matrices
+ * Ramo:     INF-221 Algoritmos y Complejidad
+ * Semestre: 2026-2
+ * Autor:    Agustin Ignacio Santibañez Perez
+ * Rol:      [202204682-1]
  * Referencias: 
  * - Hoare, C. A. R. (1961). "Algorithm 64: Quicksort"
  * - Cormen, T. H. et al. "Introduction to Algorithms" (CLRS)
+ * ============================================================================
  */
 
 #include <vector>
@@ -12,10 +17,8 @@
 void quick_sort_rec(std::vector<int>& arr, int low, int high) {
     int i = low;
     int j = high;
-    //Seleccionar el pivote en el punto medio para mitigar el peor caso en datos ordenados
     int pivot = arr[low + (high - low) / 2];
 
-    //Esquema de partición bidireccional
     while (i <= j) {
         while (arr[i] < pivot) i++;
         while (arr[j] > pivot) j--;
@@ -27,7 +30,6 @@ void quick_sort_rec(std::vector<int>& arr, int low, int high) {
         }
     }
 
-    //Llamadas recursivas sobre los sub-arreglos resultantes
     if (low < j) {
         quick_sort_rec(arr, low, j);
     }
