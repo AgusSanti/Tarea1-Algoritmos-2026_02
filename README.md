@@ -1,29 +1,69 @@
-# TAREA 1 INF221 2026-1
+# Tarea 1 - INF-221: Algoritmos y Complejidad (2026-2)
+
+Este repositorio contiene la documentación, el código fuente, la experimentación empírica y las instrucciones necesarias para la realización de la Tarea 1 de la asignatura INF221 Algoritmos y Complejidad.
+
+Entrega: archivo .zip vía aula.usm.cl
+
+---
 
 ## Estructura del Repositorio
 
-Este repositorio contiene la documentación, el código fuente y las instrucciones necesarias para la realización de la Tarea 1 de la asignatura *INF221 Algoritmos y Complejidad*.
+- assignment_statement/: Enunciado oficial y fuentes en LaTeX (.tex).
+- code/: Código fuente, datasets, mediciones y scripts de visualización.
+  - sorting/: Implementaciones de std::sort, MergeSort, QuickSort y PatienceSort.
+  - matrix_multiplication/: Implementaciones de Multiplicación Tradicional (Naive) y Algoritmo de Strassen.
+- report/: Fuentes en LaTeX e informe final compilado (report.pdf).
+- README.md: Instrucciones de compilación y ejecución.
 
-**Entrega:** archivo `.zip` vía aula.usm.cl
+---
 
-A continuación, se describe la estructura del repositorio:
+## Instrucciones de Compilación y Ejecución
 
-```bash
-├── assignment_statement
-├── code
-├── report
-└── README.md
-```
+### 1. Algoritmos de Ordenamiento
 
-### `assignment_statement`
-Contiene el enunciado de la tarea, así como los archivos fuente del enunciado en formato LaTeX (.tex).
+Navegar a la carpeta:
+cd code/sorting
 
-### `code`
-Contiene la plantilla de los archivos que deberán estar presentes en la entrega de la tarea. En ella, se deben implementar los algoritmos solicitados, los cuales se detallan a continuación:
-- `matrix_multiplication`: Algoritmo de Strassen y versión Naive.
-- `sorting`: std::sort, merge sort, quick sort, patience sort.
+Compilar el ejecutable:
+make
 
-### `report`
-En esta carpeta se encuentra la plantilla en LaTeX para la elaboración del mini-informe correspondiente a la tarea.
+Generar los conjuntos de datos de prueba:
+python3 scripts/array_generator.py
 
-***Para obtener información más detallada sobre el contenido de cada carpeta, se recomienda revisar los archivos README ubicados dentro de ellas.***
+Ejecutar las pruebas de rendimiento:
+./sorting_runner
+
+Generar los gráficos comparativos:
+python3 scripts/plot_generator.py
+
+Limpiar archivos binarios:
+make clean
+
+---
+
+### 2. Multiplicación de Matrices
+
+Navegar a la carpeta:
+cd code/matrix_multiplication
+
+Compilar el ejecutable:
+make
+
+Generar las matrices de prueba:
+python3 scripts/matrix_generator.py
+
+Ejecutar los experimentos de multiplicación:
+./matrix_runner
+
+Generar los gráficos comparativos:
+python3 scripts/plot_generator.py
+
+Limpiar archivos binarios:
+make clean
+
+---
+
+## Informe Final
+
+El informe final compilado en formato PDF se encuentra en:
+report/report.pdf
