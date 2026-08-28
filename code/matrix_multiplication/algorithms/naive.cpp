@@ -1,8 +1,14 @@
 /**
- * INF-221 Tarea 1: Algoritmos y Complejidad
- * Algoritmo: Multiplicacion tradicional de matrices (Naive) O(n^3)
+ * ============================================================================
+ * Tarea 1: Algoritmos de Ordenamiento y Multiplicación de Matrices
+ * Ramo:     INF-221 Algoritmos y Complejidad
+ * Semestre: 2026-2
+ * Autor:    Agustin Ignacio Santibañez Perez
+ * Rol:      [202204682-1]
+ * Referencias:
  * - Cormen et al. (2022). Introduction to Algorithms (4th ed.), Cap. 4.
  * - Hennessy & Patterson (2017). Computer Architecture (optimizacion de bucles i-k-j).
+ * ============================================================================
  */
 
 #include <vector>
