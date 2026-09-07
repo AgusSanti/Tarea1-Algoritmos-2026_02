@@ -22,6 +22,7 @@ Entrega: archivo .zip vía aula.usm.cl
 ## Clonación y Evaluación
 
 Debes abrir una terminal, y ejecutar estos comandos en orden
+
 git clone https://github.com/AgusSanti/Tarea1-Algoritmos-2026_02.git
 cd Tarea1-Algoritmos-2026_02
 
