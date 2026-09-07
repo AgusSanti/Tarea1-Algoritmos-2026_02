@@ -43,23 +43,30 @@ def generar_matriz(n, tipo, dominio):
 
 def guardar_matriz(matriz, nombre_archivo):
     """
-    Guarda una matriz en un archivo de texto.
+    Guarda una matriz en un archivo de texto asegurando la creación del directorio.
     """
+    dir_name = os.path.dirname(nombre_archivo)
+    if dir_name:
+        os.makedirs(dir_name, exist_ok=True)
+        
     with open(nombre_archivo, 'w') as f:
         for fila in matriz:
             f.write(' '.join(map(str, fila)) + '\n')
 
-def generar_y_guardar(n, t, d, m, carpeta="../data/matrix_input"):
+def generar_y_guardar(n, t, d, m):
     """
     Genera dos matrices y las guarda en archivos con nombres formateados.
     """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_dir = os.path.join(script_dir, "../data/matrix_input")
+    os.makedirs(output_dir, exist_ok=True)
 
     M1 = generar_matriz(n, t, d)
     M2 = generar_matriz(n, t, d)
 
     base = f"{n}_{t}_{d}_{m}"
-    archivo1 = os.path.join(carpeta, f"{base}_1.txt")
-    archivo2 = os.path.join(carpeta, f"{base}_2.txt")
+    archivo1 = os.path.join(output_dir, f"{base}_1.txt")
+    archivo2 = os.path.join(output_dir, f"{base}_2.txt")
 
     guardar_matriz(M1, archivo1)
     guardar_matriz(M2, archivo2)
