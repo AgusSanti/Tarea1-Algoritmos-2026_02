@@ -45,6 +45,10 @@ python3 scripts/array_generator.py
 Ejecutar las pruebas de rendimiento:
 ./sorting_runner
 
+En caso no tener "pandas" instalado, puede ejecutar el siguiente comando
+
+pip install pandas matplotlib
+
 Generar los gráficos comparativos:
 python3 scripts/plot_generator.py
 
