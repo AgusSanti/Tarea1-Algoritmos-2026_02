@@ -47,7 +47,7 @@ Ejecutar las pruebas de rendimiento:
 
 En caso no tener "pandas" instalado, puede ejecutar el siguiente comando
 
-pip install pandas matplotlib
+sudo apt install python3-pandas python3-matplotlib -y
 
 Generar los gráficos comparativos:
 python3 scripts/plot_generator.py
