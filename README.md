@@ -60,7 +60,7 @@ make clean
 ### 2. Multiplicación de Matrices
 
 Navegar a la carpeta:
-cd code/matrix_multiplication
+cd ../matrix_multiplication
 
 Compilar el ejecutable:
 make
