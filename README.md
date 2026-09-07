@@ -24,6 +24,7 @@ Entrega: archivo .zip vía aula.usm.cl
 Debes abrir una terminal, y ejecutar estos comandos en orden
 
 git clone https://github.com/AgusSanti/Tarea1-Algoritmos-2026_02.git
+
 cd Tarea1-Algoritmos-2026_02
 
 ### 1. Algoritmos de Ordenamiento
