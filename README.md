@@ -81,5 +81,12 @@ make clean
 
 ## Informe Final
 
-El informe final compilado en formato PDF se encuentra en:
+Para compilarlo y abrirlo, se debe seguir la siguiente secuencia
+
+cd ../../report
+pdflatex report.tex
+pdflatex report.tex
+xdg-open report.pdf
+
+En caso de querer buscarlo, el informe final compilado en formato PDF se encuentra en:
 report/report.pdf
