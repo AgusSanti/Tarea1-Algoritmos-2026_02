@@ -26,7 +26,13 @@ def generar_arreglo(n, tipo, dominio):
         raise ValueError("Tipo de ordenamiento no reconocido")
 
 def guardar_arreglo(nombre_archivo, arreglo):
-    with open(os.path.join("../data", "array_input", nombre_archivo), "w") as f:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_dir = os.path.join(script_dir, "../data/array_input")
+    
+    os.makedirs(output_dir, exist_ok=True)
+    
+    ruta_archivo = os.path.join(output_dir, nombre_archivo)
+    with open(ruta_archivo, "w") as f:
         f.write(" ".join(map(str, arreglo)))
 
 def generar_archivos():
