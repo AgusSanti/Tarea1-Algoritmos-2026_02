@@ -35,6 +35,10 @@ cd code/sorting
 Compilar el ejecutable:
 make
 
+En caso de no tener instaladas las dependencias necesarias para python3, puede ejecutar la instalación previamente con el comando
+
+sudo apt update && sudo apt install python3-numpy -y
+
 Generar los conjuntos de datos de prueba:
 python3 scripts/array_generator.py
 
